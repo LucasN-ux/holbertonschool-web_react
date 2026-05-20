@@ -1,25 +1,25 @@
-interface Student {
+export interface Student {
   firstName: string;
   lastName: string;
   age: number;
   location: string;
 }
 
-const student1: Student = {
+export const student1: Student = {
   firstName: "Alice",
   lastName: "Dupont",
   age: 20,
   location: "Paris",
 };
 
-const student2: Student = {
+export const student2: Student = {
   firstName: "Bob",
   lastName: "Martin",
   age: 22,
   location: "Lyon",
 };
 
-const studentsList: Student[] = [student1, student2];
+export const studentsList: Student[] = [student1, student2];
 
 const table: HTMLTableElement = document.createElement("table");
 const headerRow: HTMLTableRowElement = document.createElement("tr");
