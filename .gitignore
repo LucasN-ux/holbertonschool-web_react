@@ -1,6 +1,13 @@
 # Dependencies
 node_modules/
 
+# Config files
+.eslintrc.js
+tsconfig.json
+webpack.config.js
+package.json
+package-lock.json
+
 # Build output
 dist/
 build/
