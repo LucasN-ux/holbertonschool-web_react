@@ -22,15 +22,22 @@ const student2: Student = {
 const studentsList: Student[] = [student1, student2];
 
 const table: HTMLTableElement = document.createElement("table");
-const tbody: HTMLTableSectionElement = document.createElement("tbody");
+const headerRow: HTMLTableRowElement = document.createElement("tr");
+["First name", "Location"].forEach((text) => {
+  const th = document.createElement("th");
+  th.textContent = text;
+  headerRow.appendChild(th);
+});
+table.appendChild(headerRow);
 
-studentsList.forEach((student: Student) => {
-  const row: HTMLTableRowElement = tbody.insertRow();
-  const cellName: HTMLTableCellElement = row.insertCell(0);
-  const cellLocation: HTMLTableCellElement = row.insertCell(1);
-  cellName.textContent = student.firstName;
-  cellLocation.textContent = student.location;
+studentsList.forEach((student) => {
+  const row: HTMLTableRowElement = document.createElement("tr");
+  const firstNameCell: HTMLTableCellElement = document.createElement("td");
+  firstNameCell.textContent = student.firstName;
+  const locationCell: HTMLTableCellElement = document.createElement("td");
+  locationCell.textContent = student.location;
+  row.append(firstNameCell, locationCell);
+  table.appendChild(row);
 });
 
-table.appendChild(tbody);
 document.body.appendChild(table);
