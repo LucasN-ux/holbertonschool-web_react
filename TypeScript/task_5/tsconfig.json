@@ -13,5 +13,10 @@
     "forceConsistentCasingInFileNames": true,
     "lib": ["ES2020", "DOM"],
     "strict": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }
